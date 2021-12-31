@@ -22,6 +22,13 @@
            };
           });
         };
+
+      templates = {
+        latex = {
+          path = ./latex;
+          description = "LaTeX template";
+        };
+      };
     } //
     flake-utils.lib.eachDefaultSystem (system:
       let
