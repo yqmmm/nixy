@@ -41,6 +41,19 @@
 
         packages = with pkgs; {
           inherit sshping;
+          wakapi = pkgs.buildGoModule rec {
+            pname = "wakapi";
+            version = "2.0.0-RC1";
+            rev = "${version}";
+            vendorSha256 = "sha256-NJ8lPauLb5gyIGghft5rtJf8LiJwqTfn94h/r9qM5jI=";
+
+            src = fetchFromGitHub {
+              owner = "muety";
+              repo = "wakapi";
+              inherit rev;
+              sha256 = "sha256-zAMbyfZ5Gq7KHy2sHYxxdbqdEWzcE7WTtvjq7q/BGU0=";
+            };
+          };
         };
 
         defaultPackage = pkgs.sshping;
