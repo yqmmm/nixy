@@ -28,6 +28,10 @@
           path = ./latex;
           description = "LaTeX template";
         };
+        rust = {
+          path = ./rust;
+          description = "Rust template";
+        };
       };
     } //
     flake-utils.lib.eachDefaultSystem (system:
